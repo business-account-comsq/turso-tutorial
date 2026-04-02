@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies & tooling
         run: npm install
       - name: Apply migrations
-        run: npm run drizzle:migrate
+        run: npx drizzle-kit migrate
         env:
           TURSO_DATABASE_URL: ${{ secrets.TURSO_DATABASE_URL }}
           TURSO_AUTH_TOKEN: ${{ secrets.TURSO_AUTH_TOKEN }}
